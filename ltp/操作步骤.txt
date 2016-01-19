@@ -1,0 +1,13 @@
+1. 输入命令进入到ltp目录下'cd /home/wang/learngit/ltp';
+2. 输入命令进行编译:
+   ./configure
+   make
+   编译成功后，会在bin目录下生成ltp_test,ltp_server二进制程序
+3. 输入命令'./bin/ltp_test'加载模型
+4. 输入命令'vim input.txt' 输入文本
+5. 分词：输入命令'./tools/train/otcws test --model ltp_data/cws.model --input input.txt > seg.txt
+seg.txt为分好词的文本
+6. 词性标注：输入命令'./tools/train/otpos test --model ltp_data/pos.model --input seg.txt > pos.txt
+pos.txt为词性标注后的文本（输入需为分好词的文本）
+
+
